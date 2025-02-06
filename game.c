@@ -1,4 +1,5 @@
 #include <stdlib.h>
+#include "modules/game.h"
 
 enum WinningSets {
     THREE_0,

@@ -1,25 +1,25 @@
 #include <stdio.h>
+#include "modules/file.h"
 
 float bet_value() {
-    FILE *file;
+    FILE *rfile;
     float bet;
 
-    file = fopen("file/tmp/bet.txt", "r");
-    if (file == NULL) {
+    rfile = fopen("file/tmp/bet.txt", "r");
+    if (rfile == NULL) {
         printf("Erro ao abrir o arquivo bet.txt.\n");
         return 0.5; 
     }
 
-    if (fscanf(file, "%f", &bet) != 1) {
+    if (fscanf(rfile, "%f", &bet) != 1) {
         printf("Erro ao ler o valor do arquivo.\n");
-        fclose(file);
+        fclose(rfile);
         return 0.5; 
     }
 
-    fclose(file);
+    fclose(rfile);
 
-    // 4. Exibir o valor lido
     printf("Valor da aposta lido: %.2f\n", bet);
 
-    return bet; // Programa encerrado com sucesso
+    return bet; 
 }

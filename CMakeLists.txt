@@ -35,7 +35,7 @@ pico_sdk_init()
 
 # Add executable. Default name is the project name, version 0.1
 
-add_executable(Machado Machado.c )
+add_executable(Machado Machado.c game.c bet.c joystick.c)
 
 pico_set_program_name(Machado "Machado")
 pico_set_program_version(Machado "0.1")

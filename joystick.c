@@ -1,4 +1,5 @@
 #include "hardware/adc.h"
+#include "modules/joy.h"
 
 #define VRY_PIN 26
 #define VRX_PIN 27 

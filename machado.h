@@ -1,5 +1,5 @@
-#ifndef MODULES
-#define MODULES
+#ifndef MACHADO_H
+#define MACHADO_H
 
 #include "modules/joy.h"
 #include "modules/game.h"
