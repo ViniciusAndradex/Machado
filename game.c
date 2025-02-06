@@ -1,5 +1,4 @@
 #include <stdlib.h>
-#include <time.h>
 
 enum WinningSets {
     THREE_0,

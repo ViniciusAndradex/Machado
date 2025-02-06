@@ -4,8 +4,10 @@
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
 #include "hardware/uart.h"
+#include "hardware/adc.h"      
 #include "modules/joy.h"
 #include "modules/game.h"
+#include "modules/file.h"
 
 int main() {
     stdio_init_all();
@@ -15,8 +17,9 @@ int main() {
 
     while (true) {
         if (read_adc()) {
+            float value = bet_value();
             float pay = game(100.0);
-            pritnf("You receive: %02f", pay);
+            printf("You receive: %02f", pay);
         }        
         sleep_ms(500);
     }
