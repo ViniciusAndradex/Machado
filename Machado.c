@@ -4,8 +4,6 @@
 #include "hardware/uart.h"
 #include "modules/joy.h"
 
-
-
 int main() {
     stdio_init_all();
     adc_init();
