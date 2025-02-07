@@ -39,6 +39,7 @@
     "files.associations": {
         "i2c.h": "c",
         "adc.h": "c",
-        "game.h": "c"
+        "game.h": "c",
+        "globals.h": "c"
     }
 }
