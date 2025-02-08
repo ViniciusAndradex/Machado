@@ -41,6 +41,9 @@
         "adc.h": "c",
         "game.h": "c",
         "globals.h": "c",
-        "ssd1306.h": "c"
+        "ssd1306.h": "c",
+        "time.h": "c",
+        "pwm.h": "c",
+        "stdlib.h": "c"
     }
 }

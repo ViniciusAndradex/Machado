@@ -15,7 +15,7 @@ bool read_adc() {
     adc_select_input(1);
     uint16_t vry_value = adc_read(); 
     
-    if (vrx_value == 0 || vrx_value == 4095 || vry_value == 0 || vry_value == 4095){
+    if (vrx_value <= 1000 || vrx_value >= 3200 || vry_value <= 1000 || vry_value >= 3200){
         return true;
     }
     return false;
