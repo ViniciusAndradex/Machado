@@ -9,13 +9,13 @@
 #include "modules/game.h"
 #include "modules/globals.h"
 #include "modules/utils.h"
+#include "modules/buttons.h"
 
 int main() {
     stdio_init_all();
     adc_init();
     setup_joy();
-    init_button(BTN_A);
-    init_button(BTN_B);
+    setup_buttons();
     srand(time(NULL));
 
     gpio_set_irq_enabled_with_callback(BTN_A, GPIO_IRQ_EDGE_FALL, true, &callback);

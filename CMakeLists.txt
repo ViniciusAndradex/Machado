@@ -36,7 +36,7 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(Machado Machado.c libs/game/game.c libs/game/joystick.c libs/game/button.c 
-libs/utils/callback.c libs/ssd1306/ssd1306.c libs/ssd1306/twi.c)
+libs/utils/callbacks.c libs/utils/globals.c)
 
 pico_set_program_name(Machado "Machado")
 pico_set_program_version(Machado "0.1")
@@ -64,11 +64,5 @@ target_link_libraries(Machado
 target_link_libraries(Machado
     hardware_adc
 )
-# Add SSD1306
-target_link_libraries(${PROJECT_NAME} PRIVATE 
-    ssd1306
-)
 
-add_subdirectory(libs)
-target_include_directories(Machado PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/libs/ssd1306)
 pico_add_extra_outputs(Machado)
