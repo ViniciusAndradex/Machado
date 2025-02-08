@@ -56,7 +56,7 @@ A **Machado Bet** é uma demonstração poderosa de como a programação de sist
 Este projeto é licenciado sob a MIT License - consulte o arquivo LICENSE para mais detalhes.
 
 ## Desenvolvedor
-Vinicius Andrade de Moura
+**Vinicius Andrade de Moura**
 
 ### Projeto
 > Embarcatech
