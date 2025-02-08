@@ -42,8 +42,8 @@ int main() {
     print_layout("  MACHADO BET", "  A to bet 200", "  B to bet 300");
     sleep_ms(50);
     if (is_betted == true) {
-      print_layout("  MACHADO BET", "PULL THE JOYSTICK", "--------");
-      pwm_set_gpio_level(LED_A, 2000);    
+      print_layout("  MACHADO BET", "PULL THE STICK", "--------");
+      pwm_set_gpio_level(LED_A, 2000);
       while (true) {
         if (read_adc() == true) {
           struct GameResult result = game(value);
