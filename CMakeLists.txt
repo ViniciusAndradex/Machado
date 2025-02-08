@@ -36,7 +36,8 @@ pico_sdk_init()
 # Add executable. Default name is the project name, version 0.1
 
 add_executable(Machado Machado.c libs/game/game.c libs/game/joystick.c libs/game/button.c 
-libs/utils/callbacks.c libs/utils/globals.c libs/game/buzzer.c libs/game/led.c)
+libs/utils/callbacks.c libs/utils/globals.c libs/game/buzzer.c libs/game/led.c
+libs/ssd1306/ssd1306_i2c.c libs/game/display.c)
 
 pico_set_program_name(Machado "Machado")
 pico_set_program_version(Machado "0.1")

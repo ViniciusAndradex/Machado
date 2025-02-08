@@ -10,9 +10,9 @@ void callback(uint gpio, uint32_t events) {
     absolute_time_t current_time = get_absolute_time();
     if (absolute_time_diff_us(last_interrupt_time, current_time) > 100000) {
       if (gpio == BTN_A) {
-        value = 100.0;
+        value = 200.0;
       } else if (gpio == BTN_B) {
-        value = 250.0;
+        value = 300.0;
       }
       is_betted = true;
       last_interrupt_time = current_time;

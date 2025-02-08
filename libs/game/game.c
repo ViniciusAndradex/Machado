@@ -69,9 +69,12 @@ float payment(enum WinningSets set, float bet) {
     return pay;
 }
 
-float game(float bet) {
+struct GameResult game(float bet) {
+    struct GameResult game_result;
     int* nums = set_number();
     enum WinningSets result = validate_game(nums);
-
-    return payment(result, bet);
+    
+    game_result.game_numbers = nums;
+    game_result.pay = payment(result, bet);
+    return game_result;
 }

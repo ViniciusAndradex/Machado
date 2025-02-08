@@ -29,10 +29,10 @@ void beep_dual(int buzzer1, int buzzer2, uint16_t frequency, uint32_t duration) 
 
         // Configuração para ambos os buzzers
         pwm_set_wrap(slice1, wrap_value);
-        pwm_set_gpio_level(buzzer1, wrap_value / 2);
+        pwm_set_gpio_level(buzzer1, wrap_value / 55);
         
         pwm_set_wrap(slice2, wrap_value);
-        pwm_set_gpio_level(buzzer2, wrap_value / 2);
+        pwm_set_gpio_level(buzzer2, wrap_value / 55);
     } else {
         pwm_set_gpio_level(buzzer1, 0);
         pwm_set_gpio_level(buzzer2, 0);
@@ -47,11 +47,15 @@ void beep_dual(int buzzer1, int buzzer2, uint16_t frequency, uint32_t duration) 
 void victory_sound() {
     beep_dual(BUZZER_A, BUZZER_B, 1200, 2000);
     sleep_ms(20);
+    beep_dual(BUZZER_A, BUZZER_B, 1400, 1000);
+    sleep_ms(20);
     beep_dual(BUZZER_A, BUZZER_B, 1600, 1000);
 }
 
 void defeat_sound() {
-    beep_dual(BUZZER_A, BUZZER_B, 400, 2000);
+    beep_dual(BUZZER_A, BUZZER_B, 1000, 800); 
     sleep_ms(20);
-    beep_dual(BUZZER_A, BUZZER_B, 200, 1000);
+    beep_dual(BUZZER_A, BUZZER_B, 900, 600); 
+    sleep_ms(20);
+    beep_dual(BUZZER_A, BUZZER_B, 750, 800); 
 }
